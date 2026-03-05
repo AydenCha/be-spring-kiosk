@@ -10,10 +10,10 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan
 public class AppConfig {
 
-//    @Bean
-//    public DiscountPolicy discountPolicy() {
-//        return new FixedAmountDiscountPolicy(100); // 할인 금액을 여기서 설정
-//    }
+    @Bean
+    public DiscountPolicy discountPolicy() {
+        return new FixedAmountDiscountPolicy(100); // 할인 금액을 여기서 설정
+    }
 
     @Bean
     public MenuItem[] menuItems() {
