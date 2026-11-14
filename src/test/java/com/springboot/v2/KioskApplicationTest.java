@@ -36,6 +36,6 @@ class KioskApplicationTest {
         Printer printer = applicationContext.getBean("printer", Printer.class);
 
         // (3) then => 검증
-        Assertions.assertThat(printer).isInstanceOf(DiscountPolicy.class);
+        Assertions.assertThat(printer).isInstanceOf(Printer.class);
     }
 }
