@@ -49,3 +49,9 @@ tasks.named('javadoc') {
 test {
 	useJUnitPlatform()
 }
+
+// v1~v5 패키지마다 main 메서드가 있어 Gradle이 실행할 클래스를 고르지 못합니다.
+// 터미널의 ./gradlew bootRun, build는 최종 버전(v5)을 기준으로 하고, 다른 버전은 IDE에서 각 KioskApplication을 실행합니다.
+springBoot {
+	mainClass = 'com.springboot.v5.KioskApplication'
+}
